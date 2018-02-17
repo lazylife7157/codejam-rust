@@ -1,31 +1,32 @@
-use ::utils::Problem;
-use ::utils::scan::Scanner;
+use ::problems::*;
 use std::collections::HashSet;
 
 pub struct A {
     s: usize,
-    search_engines: Vec<String>,
-    q: usize,
+    // search_engines: Vec<String>,
+    // q: usize,
     queries: Vec<String>
 }
 
-impl<'a> From<&'a mut Scanner> for A {
-    fn from(scanner: &'a mut Scanner) -> A {
-        let s = scanner.next_number();
-        let search_engines = scanner.next_n_lines(s);
-        let q = scanner.next_number();
-        let queries = scanner.next_n_lines(q);
-
-        A {
-            s: s,
-            search_engines: search_engines,
-            q: q,
-            queries: queries
-        }
-    }
-}
-
 impl Problem for A {
+    fn problems(input: &mut Input) -> Vec<Box<Self>> {
+        (0..input.next_number())
+            .map(|_| {
+                let s = input.next_number();
+                // let search_engines = input.next_n_lines(s);
+                input.skip_n_lines(s);
+                let q = input.next_number();
+                let queries = input.next_n_lines(q);
+
+                A {
+                    s: s,
+                    // search_engines: search_engines,
+                    // q: q,
+                    queries: queries
+                }
+            }).map(Box::new).collect()
+    }
+
     fn solve(&self) -> String {
         let queries = self.queries.as_slice();
         let mut searched_engines = HashSet::new();

@@ -1,49 +1,36 @@
-use ::utils::Problem;
-use ::utils::scan::Scanner;
+use ::problems::*;
 use ::utils::geometry::prelude::*;
 use std::f64::consts::PI;
 
 pub struct C {
-    f: f64,
     r: f64,
-    t: f64,
-    r2: f64,
-    g: f64,
-
     interval: f64,
     safe_g: f64,
     inner_r: f64,
     unsafe_r2: f64
 }
 
-impl<'a> From<&'a mut Scanner> for C {
-    fn from(scanner: &'a mut Scanner) -> C {
-        let numbers = scanner.next_numbers();
-
-        C {
-            f: numbers[0],
-            r: numbers[1],
-            t: numbers[2],
-            r2: numbers[3],
-            g: numbers[4],
-
-            interval: numbers[4] + numbers[3] * 2.0,
-            safe_g: numbers[4] - numbers[0] * 2.0,
-            inner_r: numbers[1] - (numbers[2] + numbers[0]),
-            unsafe_r2: numbers[3] + numbers[0]
-        }
-    }
-}
-
 impl Problem for C {
+    fn problems(input: &mut Input) -> Vec<Box<Self>> {
+        (0..input.next_number())
+            .map(|_| {
+                let numbers: Vec<f64> = input.next_numbers();
+                Self {
+                    r: numbers[1],
+                    interval: numbers[4] + numbers[3] * 2.0,
+                    safe_g: numbers[4] - numbers[0] * 2.0,
+                    inner_r: numbers[1] - (numbers[2] + numbers[0]),
+                    unsafe_r2: numbers[3] + numbers[0]
+                }
+            }).map(Box::new).collect()
+    }
+
     fn solve(&self) -> String {
-        if self.safe_g > 0.0 {
-            let probability = 1.0 - self.get_safe_area() / (PI * self.r.powi(2));
-            format!("{:0.6}", probability)
-        } else {
-            // There is no chance to survive.
-            format!("{:0.6}", 1.0)
-        }
+        let probability =
+            if self.safe_g > 0.0 {
+                1.0 - self.get_safe_area() / (PI * self.r.powi(2))
+            } else { 1.0 };
+        format!("{:0.6}", probability)
     }
 }
 

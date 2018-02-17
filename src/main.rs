@@ -2,7 +2,7 @@ mod problems;
 mod utils;
 
 use utils::scan::*;
-use problems::get_solution;
+use problems::solve;
 
 fn main() {
     let args: Vec<String> = ::std::env::args().collect();
@@ -11,14 +11,10 @@ fn main() {
         let year = &args[1];
         let round = &args[2];
         let problem = &args[3];
-        let mut scanner = Scanner::from(Input::Stdin);
 
-        if let Some(solve_next) = get_solution(&year, &round, &problem) {
-            let num_of_test_cases: usize = scanner.next_number();
-
-            for i in 1..num_of_test_cases+1 {
-                println!("Case #{}: {}", i, solve_next(&mut scanner));
-            }
+        let mut input = Scanner::from(Source::Stdin);
+        if let Some(output) = solve(year, round, problem, &mut input) {
+            println!("{}", output.join("\n"));
         } else {
             print_usage();
         }
