@@ -7,3 +7,8 @@ const ROUND: &str = QR;
 fn test_a() {
     test(YEAR, ROUND, A);
 }
+
+#[test]
+fn test_b() {
+    test(YEAR, ROUND, B);
+}
