@@ -8,7 +8,7 @@ pub struct A {
     queries: Vec<String>
 }
 
-impl Problem for A {
+impl Solution for A {
     fn problems(input: &mut Input) -> Vec<Box<Self>> {
         (0..input.next_number())
             .map(|_| {

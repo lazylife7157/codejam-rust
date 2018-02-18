@@ -7,7 +7,7 @@ pub struct A {
     pattern: String
 }
 
-impl Problem for A {
+impl Solution for A {
     fn problems(input: &mut Input) -> Vec<Box<Self>> {
         let ldn: Vec<usize> = input.next_numbers();
         let words = input.next_n_lines(ldn[1]);

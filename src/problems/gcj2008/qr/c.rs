@@ -10,7 +10,7 @@ pub struct C {
     unsafe_r2: f64
 }
 
-impl Problem for C {
+impl Solution for C {
     fn problems(input: &mut Input) -> Vec<Box<Self>> {
         (0..input.next_number())
             .map(|_| {

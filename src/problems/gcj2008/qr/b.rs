@@ -10,7 +10,7 @@ pub struct B {
     arr_b_to_a: Vec<u32>
 }
 
-impl Problem for B {
+impl Solution for B {
     fn problems(input: &mut Input) -> Vec<Box<Self>> {
         (0..input.next_number())
             .map(|_| {
