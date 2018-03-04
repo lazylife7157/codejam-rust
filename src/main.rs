@@ -1,28 +1,20 @@
-mod problems;
-mod utils;
+extern crate codejam;
 
-use utils::scan::*;
-use problems::solve;
+use codejam::utils::prelude::*;
 
 fn main() {
-    let args: Vec<String> = ::std::env::args().collect();
+    let mut input = Scanner::from(Source::Stdin);
+    let t = input.next_number();
+    let result = input.next_n_lines(t)
+        .solve()
+        .enumerate()
+        .map(format_single_line)
+        .collect<Vec<String>>()
+        .join("\n");
 
-    if args.len() == 4 {
-        let year = &args[1];
-        let round = &args[2];
-        let problem = &args[3];
-
-        let mut input = Scanner::from(Source::Stdin);
-        if let Some(output) = solve(year, round, problem, &mut input) {
-            println!("{}", output.join("\n"));
-        } else {
-            print_usage();
-        }
-    } else {
-        print_usage();
-    }
+    println!("{}", result);
 }
 
-fn print_usage() {
-    eprintln!("Usage: codejam [PROBLEM_CODE] < [INPUT_FILE] > [OUTPUT_FILE]");
+fn solve(s: String) -> String {
+    s
 }

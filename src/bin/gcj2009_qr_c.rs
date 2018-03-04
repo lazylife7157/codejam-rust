@@ -1,9 +1,21 @@
 extern crate codejam;
 
-use codejam::utils::scan::*;
+use codejam::utils::prelude::*;
 
 const PHRASE: &str = "welcome to code jam";
 const LEN_PHRASE: usize = 19;
+
+fn main() {
+    let mut input = Scanner::from(Source::Stdin);
+    let n = input.next_number();
+    let result: Vec<String> = input.next_n_lines(n).into_iter()
+        .map(solve)
+        .enumerate()
+        .map(format_single_line)
+        .collect();
+
+    println!("{}", result.join("\n"));
+}
 
 fn solve(text: String) -> String {
     let mut x = vec![0; LEN_PHRASE];
@@ -18,16 +30,4 @@ fn solve(text: String) -> String {
     }
 
     format!("{:04}", x[LEN_PHRASE - 1])
-}
-
-fn main() {
-    let mut input = Scanner::from(Source::Stdin);
-    let n: usize = input.next_number();
-    let result: Vec<String> = input.next_n_lines(n).into_iter()
-        .map(solve)
-        .enumerate()
-        .map(|(i, result)| format!("Case #{}: {}", i + 1, result))
-        .collect();
-
-    println!("{}", result.join("\n"));
 }

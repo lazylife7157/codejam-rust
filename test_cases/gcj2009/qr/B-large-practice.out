@@ -1,4 +1,4 @@
-Case #1: 
+Case #1:
 a a a a b b b b b b b b
 a a a c b b b b b b d d
 a a a a b b b b b b d d
@@ -6,12 +6,12 @@ e a a a b b b b b b d f
 e g h h i i b i j j j f
 e e h h i i i i j j j f
 e e h h h i i i j j j f
-Case #2: 
+Case #2:
 a b c c c c c c d d d e e f g g
 a a c c c c h d d d d e f f f g
-Case #3: 
+Case #3:
 a
-Case #4: 
+Case #4:
 a a
 a a
 a a
@@ -39,14 +39,14 @@ a a
 a a
 a a
 a a
-Case #5: 
+Case #5:
 a b b b b c c
 a a b d d d d
 a a a d d d d
-Case #6: 
+Case #6:
 a a a a b b b b b b c c c c d d d d d e e e f f g g g h i i i
 a a a a b b b b b b c c c c d d d j e e e e g g g g g i i i i
-Case #7: 
+Case #7:
 a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b
 a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b
 a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b
@@ -147,7 +147,7 @@ d d d d d d d d d d d d d d d d d d d d d d d d d d d d f f f f f f f f f f f f 
 d d d d d d d d d d d d d d d d d d d d d d d d d d d d f f f f f f f f f f f f f f f f f f f j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j k k k k i i i i i i i i i i i i i i i i i i
 d d d d d d d d d d d d d d d d d d d d d d d d d d d d f f f f f f f f f f f f f f f f f f j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j k k k k i i i i i i i i i i i i i i i i i i
 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d f f f f f f f f f f f f f f f f j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j j k k k k i i i i i i i i i i i i i i i i i i
-Case #8: 
+Case #8:
 a
 a
 a
@@ -201,16 +201,16 @@ f
 f
 f
 f
-Case #9: 
+Case #9:
 a a a a a
 a a b b a
 a b b b a
 a b b b a
 a a a a a
-Case #10: 
+Case #10:
 a
 a
-Case #11: 
+Case #11:
 a a
 a a
 a a
@@ -224,16 +224,16 @@ c c
 c c
 d d
 d d
-Case #12: 
+Case #12:
 a b b b c c
 a a b b b c
-Case #13: 
+Case #13:
 a a a a b b b c c c c c c d d d d d d d d d e e e f f f f f f f g g g g
 a a a h b b i i i d d c d d d d d d d d d d e e e f f f f f f f j g g g
 a a k k i i i i i d d d d d d d d d d d d e e e e e f f f f f f j j j g
 k k k k k i i i i d d d d d d d d d d d d e e e e e f f f f f f f j j j
 k k k k l i i i i d d d d d d d d d d d d e e e e e e f f f f f f j j j
-Case #14: 
+Case #14:
 a
 a
 a
@@ -250,7 +250,7 @@ c
 d
 e
 e
-Case #15: 
+Case #15:
 a
 b
 b
@@ -274,7 +274,7 @@ f
 f
 g
 g
-Case #16: 
+Case #16:
 a b b b b b c c
 b b b b b b b c
 d b b b b b b c
@@ -285,9 +285,9 @@ d d d b b b b e
 d d e e e e e e
 e e e e e e e e
 e e e e e e e e
-Case #17: 
+Case #17:
 a a a a a b b b b b c c c d
-Case #18: 
+Case #18:
 a
 a
 b
@@ -308,18 +308,18 @@ e
 e
 e
 e
-Case #19: 
+Case #19:
 a a a a a a a b b b c c c d d d d d d e e e f f f
-Case #20: 
+Case #20:
 a a a b b b
 a a a b b b
-Case #21: 
+Case #21:
 a a b b b b b c c c d d e e e e f g g h h h h i i i i j j
 a a b b b b c c c c d e e e e e k k g h h h h i i i i j j
 a b b b b b c c c c d e e e e e k k k h h h h i i i i l j
-Case #22: 
+Case #22:
 a a a a a a b b c c c c c c c d d d d d d d e f f f f f f f f f f f f f g g g g g g g g g g g g g g g g g g g h h h h i i i j j j j j
-Case #23: 
+Case #23:
 a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b c c c c c c c c c c c c d d d d d d d d d d d d d d d
 a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b c c c c c c c c c c c c c d d d d d d d d d d d d d d d
 a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b c c c c c c c c c c c c c c d d d d d d d d d d d d d d
@@ -420,9 +420,9 @@ t t t t t t t t t t t z z z z z z z z z z z z z z z z z z z z z z z z w w w w w 
 t t t t t t t t t t t z z z z z z z z z z z z z z z z z z z z z z z z w w w w w w w w w w w w y y y y y y y y y y y y y y v v v v v v v v v v v v v v v v v v v v v v v v x x x x x x x x x x x x x x x
 t t t t t t t t t t z z z z z z z z z z z z z z z z z z z z z z z z z z z w w w w w w w w w w y y y y y y y y y y y y y y y v v v v v v v v v v v v v v v v v v v v v v v x x x x x x x x x x x x x x x
 t t t t t t t t z z z z z z z z z z z z z z z z z z z z z z z z z z z z z w w w w w w w w w w y y y y y y y y y y y y y y y v v v v v v v v v v v v v v v v v v v v v v v v x x x x x x x x x x x x x x
-Case #24: 
+Case #24:
 a a a a
-Case #25: 
+Case #25:
 a a a a a
 a a a a a
 a a a a a
@@ -487,7 +487,7 @@ r r r s s
 r r r s s
 r s s s s
 s s s s s
-Case #26: 
+Case #26:
 a a a a a a b b c c
 a a a a a a b b c c
 a a a a a a a b c c
@@ -497,16 +497,16 @@ a b a a b b b b b b
 b b b b b b b b b b
 b b b b b b b b b b
 b b b b b b b b b b
-Case #27: 
+Case #27:
 a a a a b b b b b b c d d d d e e e f g g g g g g h h i i i i i j j k k k k k k k k l l l l l l l
 a a a a b b b b b b c d d d d d e e e g g g g g g g h i i i i j j j k k k k k k k k l l l l l l l
-Case #28: 
+Case #28:
 a b b b c
 a d b c c
 a a e c c
 a f e c c
 a e e e c
-Case #29: 
+Case #29:
 a a a a a
 a a a a a
 a a a a a
@@ -535,7 +535,7 @@ b b b b b
 b b b b b
 b b b b b
 b b b b b
-Case #30: 
+Case #30:
 a a a
 a a a
 a a a
@@ -599,7 +599,7 @@ d d d
 d d d
 d d d
 d d d
-Case #31: 
+Case #31:
 a a a a b b b c c
 a a a a b b b c c
 a a a a b b b c c
@@ -635,19 +635,19 @@ r r r r o o o o o
 r r r r r o o o o
 s s s r r o o o o
 s s t t t t t o o
-Case #32: 
+Case #32:
 a a a a a b b b b b c c c c c c d e e e e e e f f f
 a a a g g b b b b b c c c c c c d e e e e e f f f f
-Case #33: 
+Case #33:
 a a a a a b b c c c c c d e e e f f f
 a a a a a b b c c c c d d e e e e f f
-Case #34: 
+Case #34:
 a a a b b b b b b c d d d d d d e e f f f
 a a a a b b b b b c d d d d g g g f f f f
 a a a a a b b b c c c d d g g g h f f f f
 a a a a a a a i c c c d j j g h h f f f f
 a a a a a a a i i c c c c h h h h f f f f
-Case #35: 
+Case #35:
 a b
 a a
 a a
@@ -695,7 +695,7 @@ k k
 k k
 m m
 m m
-Case #36: 
+Case #36:
 a
 a
 a
@@ -767,7 +767,7 @@ b
 b
 b
 b
-Case #37: 
+Case #37:
 a a a
 a a a
 a a a
@@ -797,7 +797,7 @@ l m m
 m m m
 m m m
 m m m
-Case #38: 
+Case #38:
 a a a a
 a a a a
 a a a b
@@ -828,7 +828,7 @@ i i i h
 i i i i
 i i i i
 i i i i
-Case #39: 
+Case #39:
 a a a a
 b a a a
 b c c c
@@ -837,7 +837,7 @@ c c c c
 c c c c
 d e c c
 d d c c
-Case #40: 
+Case #40:
 a a a a b b b c d d d
 a a a a b b b c d d d
 a a a b b b b b d d d
@@ -846,21 +846,21 @@ a a e e e e f b b f d
 a a e e e f f f f f f
 a a g g g f f f f f f
 a a g g g g f f f f f
-Case #41: 
+Case #41:
 a a a
 a a a
 a a a
 b b b
-Case #42: 
+Case #42:
 a b c d e f g h i j k l m
 n o p q r s t u v w x y z
-Case #43: 
+Case #43:
 a b b b c
 a d b c c
 a a a c c
 a e f c c
 a f f f c
-Case #44: 
+Case #44:
 a a
 a a
 a a
@@ -891,26 +891,26 @@ b b
 b b
 b b
 b b
-Case #45: 
+Case #45:
 a a a a b b b b c c d d e e e e e f f g g g h h h h h i i i i j j j j k k k k k k
 l a a b b b b b d d d d e e e e e g g g g g g h h h h i i i i j j j j j k k k k k
-Case #46: 
+Case #46:
 a a a a a a a b b b b b b b c c c c c c c c d d e e e e f f f f f f f f g g g g g g g g h h
 a a a a a a a a a b b b b b c c c c c c c d d d d e e f f f f i i i i i g g g g g g g h h h
 a a a a a a a a a a b b b b c c c c c c d d d d d d f f f f f f i i i i g g g g g g g h h h
-Case #47: 
+Case #47:
 a a a a a a a a b b b b b
 a a a a a a a b b b b b b
 c a a a a a a b b b b b b
 c c c a a a d d d d b b b
 c c c c a a d d d d b b b
 c c c c a a d d d b b b b
-Case #48: 
+Case #48:
 a a a a a a a a a a
 a a a a a a a a a a
 a a a a a a a a a a
 a a a a a a a a a a
-Case #49: 
+Case #49:
 a a b
 a a a
 a a c
@@ -919,13 +919,13 @@ c c c
 c c c
 c c c
 c c c
-Case #50: 
+Case #50:
 a a a b b b b c c c c c c
 a a a b b b b b c c c c c
 a a a d b b b e e c c c c
 a a d d d b e e e e c c c
 a a d d d e e e e e e e e
-Case #51: 
+Case #51:
 a a b b
 a a b b
 a a a c
@@ -935,7 +935,7 @@ d d d d
 d d d d
 e d d d
 e d d d
-Case #52: 
+Case #52:
 a a a a a b b
 a a a a b b b
 a a a a b b b
@@ -948,13 +948,13 @@ e e e g g g g
 e e e g g g g
 e e e g g g g
 e e e e e g g
-Case #53: 
+Case #53:
 a b b b b c c
 a a b b b c c
 a a d b c c c
 a a e e c c c
 a f e e e g g
-Case #54: 
+Case #54:
 a
 a
 a
@@ -992,7 +992,7 @@ h
 i
 i
 i
-Case #55: 
+Case #55:
 a a a a b b b b
 a a a a b b b b
 a a b b b b b b
@@ -1017,32 +1017,32 @@ j j j j j j j j
 j j j j j j k k
 k j j k k k k k
 k k k k k k k k
-Case #56: 
+Case #56:
 a b b
 a a b
 a a a
-Case #57: 
+Case #57:
 a a b b b b b b c c c c c d d d e e e e e e e e f f f f f f f f f f g g g g h h h h h i j j k k k k l m m m m m m m m m n n o o o p p p p q
 a a r b b b b b c c c c d d d d e e e e e e e e s f f f f f f f f g g g g g h h h h h i t k k k k k l m m m m m m m m n n n n o o p p p p p
-Case #58: 
+Case #58:
 a a a b b b c c
-Case #59: 
+Case #59:
 a a a a b b c c c c c c d d d d e e e f f f g g g
-Case #60: 
+Case #60:
 a a a a a a a b b b b c c c c d d d d d d d e e e e f g g g g h h
-Case #61: 
+Case #61:
 a b b b b b c c c
 a b b b b c c c c
-Case #62: 
+Case #62:
 a a a b b b b b b c c c d d d d d d d d d e e e e e e e e e e
 a a a a b b b b c c c c f d d d d d d d d e e e e e e e e e e
 a a a a b b b c c c c c f d d d d d d d e e e e e e e e e e e
-Case #63: 
+Case #63:
 a a a a b b b b b b b b c c c d d e e e e e f f f f f f g g g g g g g h h h h h h h
-Case #64: 
+Case #64:
 a a a
 b b b
-Case #65: 
+Case #65:
 a
 a
 a
@@ -1053,28 +1053,28 @@ a
 a
 b
 b
-Case #66: 
+Case #66:
 a b b b c c c d d d d d e e e e e e f
 a a a b b c c d d d d e e e e e e e f
 a a a a c c c d d d g g e e e e e h h
 a a a a c c c d g g g g g e e i h h h
 a a a a j j j j g g g g g k k k h h h
 a a a a a j j j j g g g k k k k h h h
-Case #67: 
+Case #67:
 a a a a a a a a a b
-Case #68: 
+Case #68:
 a b b b c
 a d b c c
 a a c c c
 a e f c c
 a f f f c
-Case #69: 
+Case #69:
 a b b b c
 a d b c c
 a a b c c
 a e f c c
 a f f f c
-Case #70: 
+Case #70:
 a a a a a a a a b b b b
 a a a a a a a a b b b b
 a a a a a a a a b b b b
@@ -1095,7 +1095,7 @@ g g g g g g g i f i h h
 g g g g g g g i i i i h
 g g g g g g i i i i i h
 g g g g g g i i i i i i
-Case #71: 
+Case #71:
 a a a a a b c c
 a a a a a b c c
 a a a a a a c c
@@ -1111,7 +1111,7 @@ f f f f h h i i
 f f f h h h i i
 f f f h h h i i
 f f h h h h h i
-Case #72: 
+Case #72:
 a a
 a a
 a a
@@ -1131,7 +1131,7 @@ d e
 e e
 e e
 e e
-Case #73: 
+Case #73:
 a a a a a a
 a a a a a a
 a a a a a a
@@ -1149,11 +1149,11 @@ b b b b b b
 b b b b b b
 b b b b b b
 b b b b b b
-Case #74: 
+Case #74:
 a a a a b b b b b b c c c c c c c c c c c c c c c d d d d d d e e e e e e e e e e e
-Case #75: 
+Case #75:
 a a a b b b c c c c c d d
-Case #76: 
+Case #76:
 a
 a
 a
@@ -1168,14 +1168,14 @@ b
 b
 b
 b
-Case #77: 
+Case #77:
 a a
 a a
 b a
-Case #78: 
+Case #78:
 a a b b c d d
 a a b c c c d
-Case #79: 
+Case #79:
 a a a a b b b b b b b
 a a a a a b b b b c c
 a a a a a b b b b c c
@@ -1208,7 +1208,7 @@ n n n n l l m m m m m
 n n n n n n o o m m m
 n n n n n n o o o o o
 n n n n n o o o o o o
-Case #80: 
+Case #80:
 a a
 a a
 a a
@@ -1268,12 +1268,12 @@ k k
 k k
 k k
 l l
-Case #81: 
+Case #81:
 a a a a a a a a a a a a a
-Case #82: 
+Case #82:
 a a a a
 a a a a
-Case #83: 
+Case #83:
 a
 b
 b
@@ -1281,7 +1281,7 @@ b
 b
 b
 b
-Case #84: 
+Case #84:
 a a a
 b b b
 b b b
@@ -1301,7 +1301,7 @@ d d d
 d d d
 d d d
 d d d
-Case #85: 
+Case #85:
 a a a a a a b b b b b
 a a a a a a b b b b b
 a a a a a b b b b b b
@@ -1323,10 +1323,10 @@ c c d d d d d d d d d
 d d d d d d d d d d d
 d d d d d d d d d d d
 d d d d d d d d d d d
-Case #86: 
+Case #86:
 a a a b b c c c d
 a a a b e c c c c
-Case #87: 
+Case #87:
 a b b
 a a a
 a a a
@@ -1342,10 +1342,10 @@ e e e
 e e e
 e e e
 e e e
-Case #88: 
+Case #88:
 a
 a
-Case #89: 
+Case #89:
 a a a a a a a a
 a a a a a a a a
 b a a a a a a a
@@ -1369,15 +1369,15 @@ l l l l l l m m
 l l l l l l l m
 l l l l l n n n
 o o o o o n n n
-Case #90: 
+Case #90:
 a a a b b b b b c c d d d e e f
-Case #91: 
+Case #91:
 a a a a a b b b b b b b c c d d d e e e e e e e f f f g g g g g g g g h h h h h h h h h
 a a a a a a b b b b b c c c d d d e e e e e e e f f f g g g g g g g g h h h h h h h h h
 a a a a a a a b b b c c c c c d d e e e e e e e f f f g g g g g g g g g h i i i i h h h
-Case #92: 
+Case #92:
 a a a a a a a a b b b b b b b b b b b b b b b b b b b b c c c c c c c c c c c c d d d d d d d d d d d d d d d d d e e e e e e e e e e e f f f f g g g g g g h h h h h h h h h h h h i i i i i i i
-Case #93: 
+Case #93:
 a b b b c c d d d d e e e e e
 a a b b b b d d d d e e e e e
 a a a b b b b f f f f e e e e
@@ -1386,7 +1386,7 @@ a j j j b b f f f f f f i i i
 j j j j j b f f f f f k i i i
 j j j j j f f f f f k k k i i
 j j j j j j f l f f k k k k i
-Case #94: 
+Case #94:
 a a
 a a
 a a
@@ -1436,7 +1436,7 @@ j j
 j j
 j j
 j j
-Case #95: 
+Case #95:
 a a a a b b b b b
 c c a a a b b d d
 c c c a a a e e d
@@ -1444,17 +1444,17 @@ c c f f f e e e d
 c c f f f f e e g
 c c f f f f e g g
 h c c f f g g g g
-Case #96: 
+Case #96:
 a a a a a b b c c c c c d d d e e
 a a a a a b f f f f c c d d e e e
-Case #97: 
+Case #97:
 a a a a a b b b b c c c c c d d d e e e e e e e f f f f f g g g g g h h h h h h i i i i i j j j j j j k k k k l l l l l l l l l l l l l l l l l l
 a a a a a b b b b b c c c c d d d e e e e e e e e f f f f g g g g h h h h h h h i i i i i j j j j j j k k k k l l l l l l l l l l l l l l l l l l
-Case #98: 
+Case #98:
 a b b b b c c c d
-Case #99: 
+Case #99:
 a
 a
 a
-Case #100: 
+Case #100:
 a a a

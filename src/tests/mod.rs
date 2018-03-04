@@ -1,6 +1,7 @@
 mod gcj2008;
 mod gcj2009;
 
+use std::time::SystemTime;
 use std::process::*;
 use std::fs::File;
 use std::io::prelude::*;
@@ -43,8 +44,12 @@ pub fn test(year: &str, round: &str, problem: &str) {
         .expect("Failed to read output_file.");
 
     let solver = get_solver(year, round, problem);
+
+    let now = SystemTime::now();
     solver.stdin.unwrap().write_all(&input).expect("Failed to write input");
     solver.stdout.unwrap().read_to_string(&mut _output).expect("Failed to read output");
+    let elapsed = now.elapsed().expect("Failed to elapse.");
+    println!("[gcj20{}_{}_{}] {}ms", year, round, problem, elapsed.subsec_nanos() / 1000_000);
 
     assert_eq!(output, _output);
 }
