@@ -6,8 +6,8 @@ const PHRASE: &str = "welcome to code jam";
 const LEN_PHRASE: usize = 19;
 
 fn main() {
-    let mut input = Scanner::from(Source::Stdin);
-    let n = input.next_number();
+    let mut input = Scanner::from(std::io::stdin());
+    let n = input.next_line_as_number().unwrap();
     let result: Vec<String> = input.next_n_lines(n).into_iter()
         .map(solve)
         .enumerate()

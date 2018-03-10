@@ -5,8 +5,8 @@ use codejam::utils::prelude::*;
 const EMPTY: char = 255_u8 as char;
 
 fn main() {
-    let mut input = Scanner::from(Source::Stdin);
-    let t = input.next_number();
+    let mut input = Scanner::from(std::io::stdin());
+    let t = input.next_line_as_number().unwrap();
     let result = (0..t)
         .map(|_| next_case(&mut input))
         .map(solve)
@@ -78,8 +78,8 @@ struct Case {
     map: Vec<Vec<u32>>
 }
 
-fn next_case(input: &mut Scanner) -> Case {
-    let hw = input.next_numbers();
+fn next_case(input: &mut Scanner<Stdin>) -> Case {
+    let hw = input.next_line_as_numbers();
     let map = input.next_n_lines(hw[0])
         .iter()
         .map(row_to_cells)

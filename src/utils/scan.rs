@@ -1,72 +1,83 @@
 use std::io::prelude::*;
-use std::io::BufReader;
-use std::fs::File;
 use std::str::FromStr;
 
-pub enum Source {
-    Stdin,
-    File(BufReader<File>)
+pub trait Scan {
+    fn next_line(&mut self) -> Option<String>;
+
+    fn next_n_lines(&mut self, n: usize) -> Vec<String> {
+        (0..n).filter_map(|_| self.next_line()).collect()
+    }
+
+    fn all_lines(&mut self) -> Vec<String> {
+        let mut lines = Vec::new();
+        while let Some(line) = self.next_line() {
+            lines.push(line);
+        }
+        lines
+    }
+
+    fn skip_line(&mut self) {
+        self.next_line();
+    }
+
+    fn skip_n_lines(&mut self, n: usize) {
+        for _ in 0..n {
+            self.next_line();
+        }
+    }
+
+    fn next_line_as_number<T>(&mut self) -> Option<T> where T: FromStr {
+        self.next_line().and_then(|x| x.trim().parse().ok())
+    }
+
+    fn next_line_as_numbers<T>(&mut self) -> Vec<T> where T: FromStr {
+        self.next_line()
+            .unwrap_or(String::new())
+            .split_whitespace()
+            .filter_map(|x| x.trim().parse().ok())
+            .collect()
+    }
 }
 
-pub struct Scanner {
-    stdin: ::std::io::Stdin,
-    source: Source,
-    buf: String
+const BUF_SIZE: usize = 1024;
+const NEW_LINE: u8 = '\n' as u8;
+pub struct Scanner<T> where T: Read {
+    i: usize,
+    buf: [u8; BUF_SIZE],
+    reader: T
 }
 
-impl From<Source> for Scanner {
-    fn from(input: Source) -> Scanner {
-        Scanner {
-            stdin: ::std::io::stdin(),
-            source: input,
-            buf: String::new()
+impl<T> From<T> for Scanner<T> where T: Read {
+    fn from(reader: T) -> Self {
+        Self {
+            i: BUF_SIZE - 1,
+            buf: [0; BUF_SIZE],
+            reader: reader
         }
     }
 }
 
-impl Scanner {
-    pub fn all_lines(&mut self) -> String {
-        self.buf.clear();
-        match self.source {
-            Source::Stdin => self.stdin.lock().read_to_string(&mut self.buf).unwrap(),
-            Source::File(ref mut reader) => reader.read_to_string(&mut self.buf).unwrap()
-        };
-        self.buf.trim().to_string()
-    }
+impl<'a, T> Scan for Scanner<T> where T: Read {
+    fn next_line(&mut self) -> Option<String> {
+        let mut buf = Vec::new();
 
-    pub fn next_line(&mut self) -> String {
-        self.buf.clear();
-        match self.source {
-            Source::Stdin => self.stdin.lock().read_line(&mut self.buf).unwrap(),
-            Source::File(ref mut reader) => reader.read_line(&mut self.buf).unwrap()
-        };
-        self.buf.trim().to_string()
-    }
+        loop {
+            self.i += 1;
+            if self.i == BUF_SIZE {
+                self.i = 0;
+                match self.reader.read(&mut self.buf) {
+                    Ok(n) if n > 0 => (),
+                    _ => break
+                }
+            }
 
-    pub fn next_n_lines(&mut self, n: usize) -> Vec<String> {
-        vec![0; n].iter()
-            .map(|_| self.next_line())
-            .collect()
-    }
+            if self.buf[self.i] == NEW_LINE {
+                break
+            } else {
+                buf.push(self.buf[self.i])
+            }
+        }
 
-    pub fn skip_line(&mut self) {
-        self.next_line();
-    }
-
-    pub fn skip_n_lines(&mut self, n: usize) {
-        for i in 0..n { self.skip_line(); }
-    }
-
-    pub fn next_number<T>(&mut self) -> T where T: FromStr, <T as FromStr>::Err: ::std::fmt::Debug {
-        self.next_line()
-            .parse()
-            .unwrap()
-    }
-
-    pub fn next_numbers<T>(&mut self) -> Vec<T> where T: FromStr, <T as FromStr>::Err: ::std::fmt::Debug {
-        self.next_line()
-            .split_whitespace()
-            .map(|s| s.parse().unwrap())
-            .collect()
+        String::from_utf8(buf).ok()
     }
 }

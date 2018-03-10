@@ -3,8 +3,8 @@ extern crate codejam;
 use codejam::utils::prelude::*;
 
 fn main() {
-    let mut input = Scanner::from(Source::Stdin);
-    let ldn: Vec<usize> = input.next_numbers();
+    let mut input = Scanner::from(std::io::stdin());
+    let ldn: Vec<usize> = input.next_line_as_numbers();
     let words = input.next_n_lines(ldn[1]);
     let result = input.next_n_lines(ldn[2]).into_iter()
         .map(|pattern| solve(&words, pattern))

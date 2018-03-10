@@ -4,8 +4,8 @@ use std::collections::HashSet;
 use codejam::utils::prelude::*;
 
 fn main() {
-    let mut input = Scanner::from(Source::Stdin);
-    let n = input.next_number();
+    let mut input = Scanner::from(std::io::stdin());
+    let n = input.next_line_as_number().unwrap();
     let result = (0..n)
         .map(|_| next_case(&mut input))
         .map(solve)
@@ -46,10 +46,10 @@ struct Case {
     queries: Vec<String>
 }
 
-fn next_case(input: &mut Scanner) -> Case {
-    let s = input.next_number();
+fn next_case(input: &mut Scanner<Stdin>) -> Case {
+    let s = input.next_line_as_number().unwrap();
     input.skip_n_lines(s);
-    let q = input.next_number();
+    let q = input.next_line_as_number().unwrap();
     let queries = input.next_n_lines(q);
 
     Case {

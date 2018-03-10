@@ -4,8 +4,8 @@ use codejam::utils::prelude::*;
 use codejam::utils::geometry::prelude::*;
 
 fn main() {
-    let mut input = Scanner::from(Source::Stdin);
-    let result = (0..input.next_number())
+    let mut input = Scanner::from(std::io::stdin());
+    let result = (0..input.next_line_as_number().unwrap())
         .map(|_| next_case(&mut input))
         .map(solve)
         .enumerate()
@@ -110,8 +110,8 @@ struct Case {
     unsafe_r2: f64
 }
 
-fn next_case(input: &mut Scanner) -> Case {
-    let numbers: Vec<f64> = input.next_numbers();
+fn next_case(input: &mut Scanner<Stdin>) -> Case {
+    let numbers: Vec<f64> = input.next_line_as_numbers();
     Case {
         r: numbers[1],
         interval: numbers[4] + numbers[3] * 2.0,

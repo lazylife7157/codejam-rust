@@ -3,8 +3,8 @@ extern crate codejam;
 use codejam::utils::prelude::*;
 
 fn main() {
-    let mut input = Scanner::from(Source::Stdin);
-    let n = input.next_number();
+    let mut input = Scanner::from(std::io::stdin());
+    let n = input.next_line_as_number().unwrap();
     let result = (0..n)
         .map(|_| next_case(&mut input))
         .map(solve)
@@ -47,9 +47,9 @@ pub struct Case {
     arr_b_to_a: Vec<u32>
 }
 
-fn next_case(input: &mut Scanner) -> Case {
-    let t = input.next_number();
-    let ns = input.next_numbers();
+fn next_case(input: &mut Scanner<Stdin>) -> Case {
+    let t = input.next_line_as_number().unwrap();
+    let ns = input.next_line_as_numbers();
     let na = ns[0];
     let nb = ns[1];
 
