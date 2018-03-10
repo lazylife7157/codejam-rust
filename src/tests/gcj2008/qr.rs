@@ -5,15 +5,15 @@ const ROUND: &str = QR;
 
 #[test]
 fn test_a() {
-    test(YEAR, ROUND, A);
+    test(GCJ, YEAR, ROUND, A);
 }
 
 #[test]
 fn test_b() {
-    test(YEAR, ROUND, B);
+    test(GCJ, YEAR, ROUND, B);
 }
 
 #[test]
 fn test_c() {
-    test(YEAR, ROUND, C);
+    test(GCJ, YEAR, ROUND, C);
 }
