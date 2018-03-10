@@ -1,5 +1,6 @@
 mod gcj2008;
 mod gcj2009;
+mod ks2018;
 
 use std::time::SystemTime;
 use std::process::*;
@@ -7,12 +8,15 @@ use std::fs::File;
 use std::io::prelude::*;
 
 const GCJ: &str = "gcj";
+const KS: &str = "ks";
 
 const QR: &str = "qr";
+const PR: &str = "pr";
 
 const A: &str = "a";
 const B: &str = "b";
 const C: &str = "c";
+const D: &str = "d";
 
 const IN: &str = "in";
 const OUT: &str = "out";
@@ -26,6 +30,7 @@ fn get_solver(contest:&str, year: &str, round: &str, problem: &str) -> Child {
         .stdin(Stdio::piped())
         .stdout(Stdio::piped())
         .arg("run")
+        .arg("--release")
         .arg("--bin")
         .arg(format!("{}20{}_{}_{}", contest, year, round, problem))
         .spawn()
